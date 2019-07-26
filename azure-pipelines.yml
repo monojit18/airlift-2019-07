@@ -3,13 +3,14 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+# specific path build
 trigger:
   branches:
     include:
     - master
   paths:
     include:
-    - golang/*
+    - golang
 
 pool:
   vmImage: 'ubuntu-latest'
