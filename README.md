@@ -1,3 +1,6 @@
+[![Build Status](https://msftazureairlifts.visualstudio.com/00AirliftChallenge/_apis/build/status/monojit18.airlift-2019-07?branchName=master)](https://msftazureairlifts.visualstudio.com/00AirliftChallenge/_build/latest?definitionId=34&branchName=master)
+
+
 ## Description:
 
 A sample Terraform template to deploy an AKS cluster. The [aks_advnet_rbac](/aks_advnet_rbac/) directory has the terraform code to deploy an AKS cluster with AzureCNI into a custom network and enables Kubernetes RBAC control. 
