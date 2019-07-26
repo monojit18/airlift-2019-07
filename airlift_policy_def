@@ -1,0 +1,49 @@
+{
+  "properties": {
+    "displayName": "Tag check for airlift",
+    "policyType": "Custom",
+    "mode": "All",
+    "metadata": {
+      "createdBy": "d8b332a5-c221-47e3-874d-7f65415f0528",
+      "createdOn": "2019-07-26T19:52:39.2574698Z",
+      "updatedBy": null,
+      "updatedOn": null
+    },
+    "parameters": {
+      "tagName": {
+        "type": "String",
+        "metadata": {
+          "description": "Name of the tag, such as costCenter"
+        }
+      },
+      "tagValue": {
+        "type": "String",
+        "metadata": {
+          "description": "Value of the tag, such as headquarter"
+        }
+      }
+    },
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Resources/subscriptions/resourceGroups"
+          },
+          {
+            "not": {
+              "field": "[concat('tags[',parameters('tagName'), ']')]",
+              "equals": "[parameters('tagValue')]"
+            }
+          }
+        ]
+      },
+      "then": {
+        "effect": "deny"
+      }
+    }
+  },
+  "id": "/subscriptions/967b4ee2-f688-4848-939e-8f7e81e738fe/providers/Microsoft.Authorization/policyDefinitions/ae2c3e1e-149b-43ce-b8d1-59ed3c6e05e8",
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "name": "ae2c3e1e-149b-43ce-b8d1-59ed3c6e05e8"
+}
