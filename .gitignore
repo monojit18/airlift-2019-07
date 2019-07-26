@@ -1,4 +1,4 @@
-#Ignore Terraform provider directoroes
+#Ignore Terraform provider directories
 **/.terraform/*
 
 *.tfstate
