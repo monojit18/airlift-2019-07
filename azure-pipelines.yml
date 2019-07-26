@@ -12,6 +12,15 @@ trigger:
     include:
     - golang
 
+# specific pr build
+pr:
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - golang
+    
 pool:
   vmImage: 'ubuntu-latest'
 
