@@ -85,4 +85,4 @@ terraform plan \
 # Apply the terraform plan
 terraform apply plan.tfplan
 ```
-
+done
