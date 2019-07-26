@@ -83,6 +83,6 @@ terraform plan \
   -out=plan.tfplan
   
 # Apply the terraform plan
-terraform apply plan.tfplan
+#added modifications
 ```
 done
